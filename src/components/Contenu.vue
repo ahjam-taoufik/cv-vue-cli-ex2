@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-5">
-    <list v-bind:films="films1" v-bind:txt="txt1"></list>
-    <list v-bind:films="films1" v-bind:txt="txt1"></list>
+    <p>{{textContenu}}</p>
+    <list v-on:emitchangementtxt="changetxt($event)" ></list>
   </div>
 </template>
 
@@ -10,13 +10,14 @@ import List from './list/List.vue';
 export default {
   data() {
     return {
-      films1: [
-        { name: 'gladiator', year: 2000 },
-        { name: 'seven', year: 1999 },
-        { name: 'taken', year: 2010 },
-      ],
-      txt1: 'Votre Contenu IcI',
+     
+      textContenu:'ce ci est un contenu dans le pere component'
     };
+  },
+  methods:{
+     changetxt:function(val){
+        this.textContenu=val
+     }
   },
   components: {
     list: List,

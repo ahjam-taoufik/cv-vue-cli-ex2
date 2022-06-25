@@ -1,19 +1,8 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(film, index) in films" v-bind:key="index">
-        <div class="card">
-          <div class="card-body">
-            name : {{ film.name }}
-            <br />
-            year : {{ film.year }}
-          </div>
-        </div>
-      </li>
-    </ul>
-    <p>{{ txt }}</p>
-      <button v-on:click="deleteFilm" class="btn btn-primary">Delete One Film</button>
-     <button v-on:click="deleteTxt" class="btn btn-primary">Delete txt</button>
+  
+  
+     <button v-on:click="changementtxt" class="btn btn-primary">changement txt depuis enfant</button>
   </div>
 </template>
 
@@ -23,16 +12,11 @@ export default {
     return {};
   },
   methods: {
-    deleteFilm: function () {
-     // eslint-disable-next-line vue/no-mutating-props
-     this.films.pop()
-    },
-    deleteTxt: function () {
-      // eslint-disable-next-line vue/no-mutating-props
-      this.txt = '';
-    },
+    changementtxt:function(){
+        this.$emit('emitchangementtxt','nouvelle txt');
+    }
   },
-  props: ['films', 'txt'],
+  props: [],
 };
 </script>
 
