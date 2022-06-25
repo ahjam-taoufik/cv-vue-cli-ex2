@@ -1,21 +1,25 @@
 <template>
-    <div>
-       {{txt}}
-    </div>
+  <div>
+    {{ txt }}
+    <list></list>
+  </div>
 </template>
 
 <script>
-    export default {
-        data(){
-            return {
-                txt:'Votre Contenu IcI'
-            }
-        }
-    }
-
-    
+import List from './list/List.vue';
+export default {
+  data() {
+    return {
+      txt: 'Votre Contenu IcI',
+    };
+  },
+  components: {
+    list: List,
+  },
+};
 </script>
 
 <style scoped>
+  
 
 </style>
