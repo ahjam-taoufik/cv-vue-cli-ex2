@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ txt }}
-    <list></list>
+    <list v-bind:prenom="prenom" ></list>
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       txt: 'Votre Contenu IcI',
+      prenom:'taoufik'
     };
   },
   components: {
@@ -19,7 +20,4 @@ export default {
 };
 </script>
 
-<style scoped>
-  
-
-</style>
+<style scoped></style>

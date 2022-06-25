@@ -4,6 +4,7 @@
          <li v-for="(fruit ,index) in fruits" v-bind:key="index" >{{fruit}} </li>
        </ul>
        <p>paragraph depuis List</p>
+       <p>{{prenom}} </p>
     </div>
 </template>
 
@@ -13,7 +14,8 @@
             return {
                 fruits:['orange','fraise','pomme']
             }
-        }
+        },
+        props:['prenom']
         
     }
 </script>
