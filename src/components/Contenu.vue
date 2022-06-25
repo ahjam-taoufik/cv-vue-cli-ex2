@@ -11,11 +11,8 @@ export default {
   data() {
     return {
       txt: 'Votre Contenu IcI',
-      person: {
-        name:"taoufik",
-        genre:"male",
-        city:'agadir'
-      }
+      person:"taoufik",
+      
     };
   },
   components: {

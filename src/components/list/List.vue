@@ -5,7 +5,10 @@
     </ul>
     <p>paragraph depuis List</p>
 
-      <p> {{ person.name }}</p> 
+      <p> {{ person }}</p>   <!-- from props direct -->
+      <p> {{ reversePerson().person}}</p>  <!-- from methods -->
+      <p> {{ reversePerson().revers}}</p>  <!-- from methods -->
+ 
      
   </div>
 </template>
@@ -18,6 +21,14 @@ export default {
     };
   },
   props: ['person'],
+  methods: {
+    reversePerson:function(){
+        return {
+            person:this.person,
+            revers:this.person.split('').reverse().join('')
+        }
+    }
+  }
 };
 </script>
 
