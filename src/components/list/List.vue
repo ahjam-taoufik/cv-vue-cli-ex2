@@ -1,14 +1,16 @@
 <template>
   <div>
     <ul>
-      <li v-for="(fruit, index) in fruits" v-bind:key="index">{{ fruit }}</li>
+      <li v-for="(film, index) in films" v-bind:key="index">
+        <div class="card">
+          <div class="card-body">
+            name : {{ film.name }}
+            <br/>
+            year : {{ film.year }}
+          </div>
+        </div>
+      </li>
     </ul>
-    <p>paragraph depuis List</p>
-
-      <p> {{ person }}</p>   <!-- from props direct -->
-    
- 
-     
   </div>
 </template>
 
@@ -16,17 +18,10 @@
 export default {
   data() {
     return {
-      fruits: ['orange', 'fraise', 'pomme'],
+     
     };
   },
-  props:{
-    person:{
-        type:String,//Function, Object , Number 
-        required:true
-    }
-  }
-  
-  
+  props: ['films'],
 };
 </script>
 
