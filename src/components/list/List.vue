@@ -5,11 +5,8 @@
     </ul>
     <p>paragraph depuis List</p>
 
-    <ul>
-      <li v-for="(prenom, index) in prenoms" v-bind:key="index">
-        {{ prenom }}
-      </li>
-    </ul>
+      <p> {{ person.name }}</p> 
+     
   </div>
 </template>
 
@@ -20,7 +17,7 @@ export default {
       fruits: ['orange', 'fraise', 'pomme'],
     };
   },
-  props: ['prenoms'],
+  props: ['person'],
 };
 </script>
 
