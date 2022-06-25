@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ txt }}
-    <list v-bind:person="person" ></list>
+    <list v-bind:person="person1" ></list>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       txt: 'Votre Contenu IcI',
-      person:"taoufik",
+      person1:"taoufik",
       
     };
   },

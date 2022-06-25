@@ -6,8 +6,7 @@
     <p>paragraph depuis List</p>
 
       <p> {{ person }}</p>   <!-- from props direct -->
-      <p> {{ reversePerson().person}}</p>  <!-- from methods -->
-      <p> {{ reversePerson().revers}}</p>  <!-- from methods -->
+    
  
      
   </div>
@@ -20,15 +19,14 @@ export default {
       fruits: ['orange', 'fraise', 'pomme'],
     };
   },
-  props: ['person'],
-  methods: {
-    reversePerson:function(){
-        return {
-            person:this.person,
-            revers:this.person.split('').reverse().join('')
-        }
+  props:{
+    person:{
+        type:String,//Function, Object , Number 
+        required:true
     }
   }
+  
+  
 };
 </script>
 
