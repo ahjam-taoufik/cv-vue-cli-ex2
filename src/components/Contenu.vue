@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ txt }}
-    <list v-bind:prenom="prenom" ></list>
+    <list v-bind:prenoms="prenomTable" ></list>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       txt: 'Votre Contenu IcI',
-      prenom:'taoufik'
+      prenomTable:['taoufik','ali','mohammed']
     };
   },
   components: {
