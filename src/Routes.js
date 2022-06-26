@@ -6,5 +6,5 @@ export default [
 
     {path:'/',component:Accueil},
     {path:'/p1',component:Page1},
-    {path:'/p2',component:Page2}
+    {path:'/p2/:id?',component:Page2}
 ]
