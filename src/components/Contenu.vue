@@ -1,45 +1,33 @@
 <template>
   <div class="container mt-5">
     <h1>page de Contenu</h1>
-    <p>{{textContenu}}</p>
-    <list v-on:emitchangementtxt="changetxt($event)" ></list>
-    <modale  v-bind:reveal="reveal" v-bind:toggle="toggle"></modale>
-    <button v-on:click="toggle">show modal</button>
-    
+    <img v-bind:src="urlImg" alt="">
   </div>
 </template>
 
 <script>
-import List from './list/List.vue';
-import Modale from './Modal.vue'
+import axios from 'axios';
 export default {
   data() {
     return {
-     
-      textContenu:'ce ci est un contenu dans le pere component',
-      reveal:false
-    
+      urlImg: null,
     };
   },
-  methods:{
-     changetxt:function(val){
-        this.textContenu=val
-     },
-     toggle:function(){
-        this.reveal= !this.reveal
-     }
-  },
-  components: {
-    list: List,
-    modale:Modale
+  mounted() {
+    axios.get('https://api.thecatapi.com/v1/images/search').then((res) => {
+      this.urlImg = res.data[0].url;
+    });
   },
 };
 </script>
 
 <style scoped>
-  h1{
-    margin-top: 100px;
+h1 {
+  margin-top: 100px;
+ 
+}
+ img{
+    height: 300px;
+    width: 300px;
   }
-
-
 </style>
