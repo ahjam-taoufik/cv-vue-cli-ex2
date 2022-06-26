@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <contenu></contenu>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   
-  import Contenu from './components/Contenu.vue'
+
 export default {
   name: 'App',
   components: {
-   'contenu':Contenu,
+ 
   
   }
 }
