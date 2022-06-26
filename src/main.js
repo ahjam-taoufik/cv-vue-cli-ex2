@@ -5,6 +5,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+export const bus= new Vue();
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <h1>page de Contenu</h1>
     <p>{{textContenu}}</p>
     <list v-on:emitchangementtxt="changetxt($event)" ></list>
   </div>
@@ -25,4 +26,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  h1{
+    margin-top: 100px;
+  }
+
+
+</style>
