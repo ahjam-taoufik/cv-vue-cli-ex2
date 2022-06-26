@@ -16,6 +16,7 @@ export default {
      bus.$on('emitchangementTitre',(data)=>{
           this.titre=data
      })
+     console.log('ok');
 
   }
 };
