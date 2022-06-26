@@ -1,7 +1,7 @@
 <template>
     <div>
        <h1>this is  page 1</h1>
-      <button v-on:click="retour" class="btn btn-warning">Retour au home page</button> </button>
+      <button v-on:click="retour" class="btn btn-warning">Retour au home page</button>
 
     </div>
 </template>

@@ -3,7 +3,6 @@
         <ul class="nav">
             <li class="btn btn-primary btn-custom"><router-link to="/" exact>Home</router-link></li>
             <li class="btn btn-primary btn-custom"><router-link to="/p1">page1</router-link></li>
-            <li class="btn btn-primary btn-custom"><router-link to="/p2">page2</router-link></li>
         </ul>
         
 
