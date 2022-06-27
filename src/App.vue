@@ -1,29 +1,43 @@
 <template>
-  <div id="app">
-    <header-top></header-top>
-    <router-view></router-view>
+  <div>
+     <p v-on:click="isLiked= !isLiked"  :class="className" >{{numberlike}} like</p>
   </div>
 </template>
 
 <script>
-  import Header from './components/Header.vue'
-
-export default {
-  name: 'App',
-  components: {
-     'header-top':Header
-  
+  export default {
+    data(){
+      return{ 
+        numberlike:0,
+        class:"liked",
+        isLiked:false 
+      }
+    },
+    computed:{
+      className:function(){
+        return (this.isLiked)? this.class:''
+      },
+      addliked:function(){
+        return this.numberlike
+      }
+    },
+    watch:{
+      isLiked:function(){
+        if(this.isLiked){
+          this.numberlike++
+        }else{
+           this.numberlike--
+        }
+      }
+    }
+    
   }
-}
 </script>
 
-<style>
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+<style  scoped>
+
+.liked{
+  color:blue
+}
+
 </style>
